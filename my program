@@ -1,0 +1,101 @@
+sum of array
+#include<stdio.h>
+int main()
+{
+    int arr[]={10,20,30,40,50};
+    
+    for( int i=0;i<5;i++)
+    {
+sum=sum+arr[i];
+    }
+printf(" sum %d",sum);
+return 0;
+}
+output:
+ sum is 150
+swap without swap function;
+
+#include<stdio.h>
+int main()
+{
+    int arr[]={10,20,30,40,50};
+   int len=5;
+    for( int i=0;i<len;i++)
+    {
+         int temp;
+        temp=arr[len-1];
+    arr[len-1]=arr[len-len];
+    arr[len-len]=temp;
+    }
+printf(" %d %d %d %d %d",arr[0],arr[1],arr[2],arr[3],arr[4]);
+return 0;
+}
+two times swap
+#include<stdio.h>
+int main()
+{
+    int arr[]={10,20,30,40,50};
+   int len=5;
+    for( int i=0;i<len;i++)
+    {
+         int temp;
+        temp=arr[len-1];
+    arr[len-1]=arr[len-len];
+    arr[len-len]=temp;
+    }
+
+for( int i=0;i<len;i++)
+    {
+         int temp;
+        temp=arr[len-4];
+    arr[len-4]=arr[len-2];
+    arr[len-2]=temp;
+    }
+    printf(" %d %d %d %d %d\n",arr[0],arr[1],arr[2],arr[3],arr[4]);
+    printf(" %d %d %d %d %d",arr[0],arr[1],arr[2],arr[3],arr[4]);
+    
+return 0;
+}
+
+
+larger number in array elements:
+
+
+#include<stdio.h>
+int main()
+{
+    int arr[]={10,20,30,40,50};
+    
+    int large=arr[0];
+    
+    for( int i=0;i<5;i++)
+    {
+        if(arr[i]>large)
+        {
+            large=arr[i];
+        }
+    }
+        printf(" the large number:%d",large);
+}
+        
+
+reverse a number;
+
+#include<stdio.h>
+int main()
+{
+    int n,r=0,rem;
+    printf("enter the number");
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        rem=n%10;
+        r=r*10+rem;
+        n/=10;
+    }
+    printf("rever number :%d",r);
+    return 0;
+}
+output ;
+123
+321
