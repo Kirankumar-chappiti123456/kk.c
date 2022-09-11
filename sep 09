@@ -48,3 +48,65 @@ int main()
     }
     printf("enter the sum of numbers:%d",sum);
 }
+
+max and min using functions:
+#include <stdio.h>
+ #include <conio.h>
+ 
+ int sumofarray(int a[],int n)
+ {
+ 	int min,max,i;
+ 	min=max=a[0];
+    for(i=1; i<n; i++)
+    {
+         if(min>a[i])
+		  min=a[i];   
+		   if(max<a[i])
+		    max=a[i];       
+    }
+    
+    printf("minimum of array is : %d\n",min);
+    printf("maximum of array is : %d",max);
+ }
+int main()
+{
+    int a[1000],i,n,sum;
+   
+    printf("Enter size of the array : ");
+    scanf("%d", &n);
+ 
+    printf("Enter elements in array : ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    sumofarray(a,n);
+}
+without functions:
+#include <stdio.h>
+int main()
+{
+    int arr[]={20,34,56,78,22};
+    int large=arr[0];
+    for(int i=0;i<5;i++)
+    {
+        if(arr[i]>large)
+        {
+            large=arr[i];
+            
+        }
+    }
+    printf(" the max number:%d\n",large);
+for(int i=0;i<5;i++)
+    {
+        if(arr[i]<large)
+        {
+            large=arr[i];
+            
+        }
+    }
+    printf("the min number:%d",large);
+}
+output:
+ the max number:78
+the min number:20
