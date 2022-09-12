@@ -1,0 +1,30 @@
+#include<stdio.h>
+struct student
+{
+    char name[20];
+    int rollno;
+    float marks;
+};
+int main()
+{
+    struct student s1[3];
+    for(int i=0;i<3;i++)
+    {
+        scanf("%s %d %f",s1[i].name,&s1[i].rollno,&s1[i].marks);
+    }
+    for(int i=0;i<3;i++)
+    {
+        printf("%s %d %f",s1[i].name,s1[i].rollno,s1[i].marks);
+    }
+}
+output:
+kiran 
+12
+56
+kumar 
+34
+67
+sasi 
+23
+56
+
