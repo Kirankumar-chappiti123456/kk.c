@@ -1,3 +1,4 @@
+Create 3 student details:
 #include<stdio.h>
 struct student
 {
@@ -27,4 +28,112 @@ kumar
 sasi 
 23
 56
+structure on stack
 
+
+#include <stdio.h>
+#include<stdlib.h>
+typedef struct sailaja
+{
+    char name[100];
+    int roll;
+    float marks[5];
+}sailu;
+void display(sailu *ptr)
+{
+    printf("%s %d",ptr->name,ptr->roll);
+    for(int i=0;i<5;i++)
+    printf("%f ",ptr->marks[i]);
+    printf("iam done");
+    
+}
+
+int main()
+{
+ sailu s_stack;
+ //assigning values to s_stack
+scanf("%s",s_stack.name);// s1 
+scanf("%d",&s_stack.roll);// s1 
+
+for (int i =0; i<5;i++)
+scanf("%f",&s_stack.marks[i]);// s1 
+display(&s_stack);
+
+   
+    return 0;
+}
+
+
+
+Struct on heap:
+
+
+#include <stdio.h>
+#include<stdlib.h>
+typedef struct sailaja   
+{
+    char name[100];
+    int roll;
+    float marks[5];
+}sailu;
+void display(sailu *ptr)
+{
+    printf("%s %d",ptr->name,ptr->roll);
+    for(int i=0;i<5;i++)
+    printf("%f ",ptr->marks[i]);
+    printf("iam done");
+    printf("%d",sizeof(sailu));
+}
+
+int main()
+{
+sailu *s_heap=(sailu*) malloc(sizeof(sailu));
+scanf("%s",s_heap->name);
+scanf("%d",&s_heap->roll);
+for(int i=0;i<5;i++)
+scanf("%f",&s_heap->marks[i]);
+display(s_heap);
+
+
+   
+    return 0;
+}
+Search a word on string:
+
+#include <stdio.h>
+int main()
+{
+    char h='a';
+    char str[]={'a','b','c','d'};
+    int len=sizeof(str)/sizeof(str[0]);
+    for(int i=0;i<len;i++)
+    {
+        if(h==str[i])
+        {
+            printf("found");
+            break;
+        }
+
+#include <stdio.h>
+#include<string.h>
+struct student
+{
+    
+    int rollno;
+    char name[20];
+    float marks;
+    
+}s1;
+
+   int  main()
+    {
+        
+        s1.rollno=20;
+      strcpy(s1.name,"kiran");
+        s1.marks=12.1;
+        printf("%d\n",s1.rollno);
+          printf("%s\n",s1.name);
+            printf("%f",s1.marks);
+        return 0;
+        
+    }
