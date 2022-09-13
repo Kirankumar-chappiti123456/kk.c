@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    int b=7,f=0;
+    int arr[]={1,2,3,4,5};
+    for(int i=0;i<5;i++)
+    if((arr[i]^b)==0)
+    f++;
+ 
+(f==1)?printf("found"):printf("not found");
+}
